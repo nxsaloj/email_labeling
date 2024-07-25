@@ -1,0 +1,6 @@
+[submodule "email_labeling.backend"]
+	path = email_labeling.backend
+	url = https://github.com/nxsaloj/email_labeling.backend
+[submodule "email_labeling.frontend"]
+	path = email_labeling.frontend
+	url = https://github.com/nxsaloj/email_labeling.frontend
