@@ -1,0 +1,23 @@
+services:
+  backend:
+    container_name: elbackend
+    build:
+      context: ./email_labeling.backend
+      dockerfile: ./Dockerfile
+      target: dev
+    ports:
+      - 5000:5000
+    volumes:
+      - ./email_labeling.backend/:/home/app/
+
+  frontend:
+    container_name: elfrontend
+    build:
+      context: ./email_labeling.frontend
+      dockerfile: ./Dockerfile
+      target: base
+    ports:
+      - 5173:5173
+    volumes:
+      - ./email_labeling.frontend:/home/app
+      - /home/app/node_modules/
